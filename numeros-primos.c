@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 #include<locale.h>
 //Implemente um progrma para identificar se um número é primo.
