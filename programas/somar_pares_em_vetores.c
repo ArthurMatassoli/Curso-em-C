@@ -83,7 +83,6 @@ int main()
 	maior_num(soma_par);
 	
 	printf("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-	
 	printf("\nO maior número é: %d\n", maior);
 	printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");									
 }
