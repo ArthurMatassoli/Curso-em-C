@@ -1,6 +1,6 @@
 /* 
 Programação estruturada
-Aluno: Arthur matassoli
+Aluno: Arthur Matassoli
 Matrícula: 2021200117
 Turma:931
 */
