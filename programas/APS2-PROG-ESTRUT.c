@@ -1,9 +1,9 @@
 /* 
-	APS 2 - PROGRAMA«√O ESTRUTURADA
+	APS 2 - PROGRAMA√á√ÉO ESTRUTURADA
 	ALUNO: ARHTUR MATASSOLI DOS SANTOS NUNES
-	MATRÕCULA: 2021200117
+	MATR√çCULA: 2021200117
 	TURMA: 931
-	PROFESSOR: S…RGUIO ASSUN«√O MONTEIRO
+	PROFESSOR: S√âRGIO ASSUN√á√ÉO MONTEIRO
 */
 
 #include <stdlib.h>
@@ -28,7 +28,7 @@ FILE *arquivo;
 
 struct usuario C;
 
-// Menu de opÁıes
+// Menu de op√ß√µes
 char menu(){
 	
 	setlocale ( LC_ALL, "Portuguese" );
@@ -37,18 +37,18 @@ char menu(){
     printf("\n======================================\n");
     printf("=============== AGENDA ===============");
     printf("\n======================================\n");
-    printf("\n\nEscolha uma das opÁıes abaixo:\n");
+    printf("\n\nEscolha uma das op√ß√µes abaixo:\n");
     printf("\n");
     printf("[1] - Cadastrar contato.\n");
     printf("[2] - Procurar contato. \n");
     printf("[3] - Editar contato.\n");
     printf("[4] - Excluir contato.\n\n");
-    printf("Digite a opÁ„o:");
+    printf("Digite a op√ß√£o:");
 
     return (getche());
 }
 
-/*/ Pesquisa pelo telefone de inscriÁ„o
+/*/ Pesquisa pelo telefone de inscri√ß√£o
 int BuscaTelefone(int n){
     fread(&C,sizeof(C),1,arquivo);
 
@@ -62,7 +62,7 @@ int BuscaTelefone(int n){
     return 0;
 }
 */
-// Cadastro de usu·rio
+// Cadastro de usu√°rio
 void cadastrarUsuario(){    
     int i;  
     arquivo = fopen("agenda.txt","a+b");
@@ -91,7 +91,7 @@ void cadastrarUsuario(){
         printf("\nDigite o E-mail: ");  
         fflush(stdin);  
         gets(C.email);  
-        printf("\nDigite o EndereÁo: ");    
+        printf("\nDigite o Endere√ßo: ");    
         fflush(stdin);  
         gets(C.endereco); 
         fwrite(&C,sizeof(C),1,arquivo); 
@@ -99,13 +99,13 @@ void cadastrarUsuario(){
     }
 
     else{
-        printf("\nC”DIGO DE INSCRI«√O J¿ CADASTRADO!!!.\n");   
+        printf("\nC√ìDIGO DE INSCRI√á√ÉO J√Ä CADASTRADO!!!.\n");   
     }
     fclose(arquivo);
 
 }
 
-// Buscar usu·rio pelo telefone
+// Buscar usu√°rio pelo telefone
 void buscarUsuario(){
 	char telefone[20];
     arquivo = fopen("agenda.txt","rw");
@@ -115,7 +115,7 @@ void buscarUsuario(){
     }
 
     printf("\n");
-    printf("\nDigite o telefone da inscriÁ„o: ");
+    printf("\nDigite o telefone da inscri√ß√£o: ");
     scanf("%d",&telefone);
     
 	if(C.telefone !=0){
@@ -128,19 +128,19 @@ void buscarUsuario(){
 	        printf("RG: %s\n",C.rg);
 	        printf("Telefone: %s\n",C.telefone);
 	        printf("E-mail: %s\n",C.email);
-	        printf("EndereÁo: %s\n",C.endereco);
+	        printf("Endere√ßo: %s\n",C.endereco);
 	        printf("\n======================================\n");
 
 	        getchar();
 	        getchar();
     	}
     else;
-        printf("\nTELEFONE DE INCRI«√O INV¡LIDO!!!\n");
+        printf("\nTELEFONE DE INCRI√á√ÉO INV√ÅLIDO!!!\n");
     	fclose(arquivo);
 		}
 
 
-// EdiÁ„o de usu·rio
+// Edi√ß√£o de usu√°rio
 void editarUsuario()
 {
     char telefone[20];
@@ -149,7 +149,7 @@ void editarUsuario()
         printf("ERRO AO ABRIR O ARQUIVO!!!\n");
     }
     printf("\n");
-    printf("\nDigite o telefone da inscriÁ„o: ");
+    printf("\nDigite o telefone da inscri√ß√£o: ");
     scanf("%d",&telefone);
 
     //Busca Telefone
@@ -164,7 +164,7 @@ void editarUsuario()
         return;
     }
 	
-    printf("\n\nDigite o telefone da inscriÁ„o: ");
+    printf("\n\nDigite o telefone da inscri√ß√£o: ");
     scanf("%d",&C.num);
 
         printf("\nDigite o Nome: ");
@@ -185,23 +185,23 @@ void editarUsuario()
         printf("\nDigite o E-mail: ");
         fflush(stdin);
         gets(C.email);
-        printf("\nDigite o EndereÁo: ");
+        printf("\nDigite o Endere√ßo: ");
         fflush(stdin);
         gets(C.endereco);
-        printf("\nALTERA«√O REALIZADA COM SUCESSO!!!");
+        printf("\nALTERA√á√ÉO REALIZADA COM SUCESSO!!!");
         fwrite(&C,sizeof(C),1,arquivo);
         getchar();
     
 }
 
-// Apagar usu·rio
+// Apagar usu√°rio
 void apagarUsuario()
 {
     FILE* arquivo = fopen("agenda.txt", "rw");
     FILE* novoArquivo = fopen("temp.txt", "w");
     char telefone[20];
 
-    printf("\nDigite o telefone do usu·rio a ser excluido: ");
+    printf("\nDigite o telefone do usu√°rio a ser excluido: ");
     scanf("%s", telefone);
     
 	while(!feof(arquivo)){
@@ -216,7 +216,7 @@ void apagarUsuario()
     rename("temp.txt", "agenda.txt");
 }
 
-// FunÁ„o principal
+// Fun√ß√£o principal
 main(){
     char op;
     while(op!='6'){
